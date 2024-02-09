@@ -1,0 +1,13 @@
+.party-poppers-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.party-pop img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100vw; /* Adjust the size of the party popper images as needed */
+  height: auto;
+}

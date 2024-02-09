@@ -1,0 +1,156 @@
+@import "https://unpkg.com/open-props";
+
+/* .category {
+  border: 3px solid;
+  margin: 20px 5px;
+  text-align: center;
+  line-height: 2.3em;
+  background-color: rgb(85, 47, 136);
+  cursor: pointer;
+}
+.category:hover {
+  box-shadow: 0 6px rgb(191, 150, 219);
+}
+.active {
+  box-shadow: 0 -7px rgb(24, 24, 42);
+  transform: translateY(4px);
+  background-color: black;
+} */
+
+.category {
+  text-align: center;
+  margin-top: 40px;
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-6);
+  font-size: var(--font-size-5);
+  color: var(--gray-8);
+  background: var(--gray-0);
+  border: 0;
+  padding: var(--size-4) var(--size-8);
+  transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+  transition: transform 0.5s;
+  position: relative;
+  cursor: pointer;
+  border-radius: 34px;
+  border: solid rgb(6, 7, 71);
+  padding: 20px;
+}
+
+.category:hover,
+.active {
+  --y: -10;
+  --scale: 1.1;
+  --border-scale: 1;
+  color: rgb(130, 47, 112);
+  border: solid rgb(125, 4, 54);
+  border-color: rgb(181, 52, 172);
+  border: 5px solid rgb(216, 9, 185);
+  background: linear-gradient(90deg, #72e3b4, #edb2d3, #f4eca2, #03a9f4);
+  margin-top: 30px;
+
+  transition: 0.35s ease-in-out;
+
+
+}
+
+.category:active {
+  --y: 5%;
+  --scale: 0.9;
+  --border-scale: 0.9, 0.8;
+  background-color: rgb(207, 189, 199);
+  transition: 0.35s ease-in-out;
+}
+
+.category:before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--size-3) * -1);
+  border: var(--size-2) solid var(--gray-0);
+  transform: scale(var(--border-scale, 0));
+  transition: transform 0.125s;
+  border-radius: 34%;
+  border: solid 4px rgb(240, 209, 245);
+
+  --angle-one: 105deg;
+  --angle-two: 290deg;
+  --spread-one: 30deg;
+  --spread-two: 40deg;
+  --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+  --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+  --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+  --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
+
+  mask: conic-gradient(
+    transparent 0 var(--start-one),
+    white var(--start-one) var(--end-one),
+    transparent var(--end-one) var(--start-two),
+    white var(--start-two) var(--end-two),
+    transparent var(--end-two)
+  );
+
+  z-index: -1;
+}
+.category {
+  font-size: 24px;
+  padding: 10px;
+  margin: 8px;
+  border: 4px solid #0f0819;
+  background: linear-gradient(90deg, #c151a3, #a2e0e4, #d5e3c7, #2c886c);
+
+  cursor: pointer;
+  text-align: center;
+
+  transition: background-color 0.35s ease-in-out;
+
+}
+
+.category:hover {
+  background: linear-gradient(90deg, #40c6c6, #aecfad, #edda98, #b871f2);
+  color: black;
+}
+
+@media only screen and (max-width: 599px) {
+  h2 {
+    font-size: 4em;
+  }
+
+  .category {
+    font-size: 22px;
+    margin: 5px;
+    border-radius: 22%;
+  }
+}
+
+/* Styles for Tablets/Laptops */
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  h2 {
+    font-size: 5em;
+  }
+
+  .category {
+    font-size: 24px;
+    margin: 8px;
+    background-color: #d3c8e9;
+    color: rgb(6, 5, 71);
+    border: solid rgb(54, 106, 31) 3px;
+    border-radius: 39%;
+    background: linear-gradient(90deg, #ba8dd8, #a7e7d9, #e8ab97, #77f3da);
+  }
+}
+
+/* Styles for Desktops */
+@media only screen and (min-width: 1024px) {
+  h2 {
+    font-size: 6em;
+  }
+
+  .category {
+    font-size: 28px;
+    margin: 10px;
+    color: rgb(6, 5, 71);
+    border: solid rgb(52, 155, 8) 3px;
+    border-radius: 34%;
+    padding: 15px;
+    margin: 20px;
+  }
+}

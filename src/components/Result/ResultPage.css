@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Just+Another+Hand&family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+
+
+.congrats{
+    font-family:'Abril Fatface' ;
+    color: rgba(247, 6, 219, 0.588);
+    font-size: 80px;
+}
+.loss{
+    font-family:'Abril Fatface' ;
+    background:  linear-gradient(90deg, #e4d8eb, #c155de, #918cd9, #77f3da);
+    border-radius: 50px;
+    font-size: 70px;
+    color: rgb(7, 13, 13);
+    padding: 10px;
+    font-family:'Style Script' ;
+    letter-spacing: 4px;
+}
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
+   
+}
+.resulth2{
+    font-family:'Style Script' ;
+    margin: 0;
+    padding: 0;
+    font-size: 100px;
+}
+.result-message{
+    margin: 20px;
+font-size: 40px;
+font-family: 'Times New Roman', Times, serif;
+color: rgb(245, 229, 229);
+}
+
+.result-items>p{
+    font-weight: bolder;
+    font-size: 2rem;
+    background: -webkit-linear-gradient(#d93798, #fb8015);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+}
+.result-items>p>span{
+  background: -webkit-linear-gradient(#dda305, #95e0f1);
+  -webkit-background-clip: text;
+  font-family:'Oleo Script' ;
+}
+
+.result-items {
+   
+    margin: auto;
+    padding: 20px 60px;
+    transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+    transition: transform 0.1s;
+  
+    --y: -10;
+    --scale: 1.1;
+    --border-scale: 1;
+    width: 20rem;
+  }
+  .result-items::before {
+    content: "";
+    position: absolute;
+    inset: calc(var(--size-3) * -1);
+    border: var(--size-2) solid var(--gray-0);
+    transform: scale(var(--border-scale, 0));
+    transition: transform 0.125s;
+    border-radius: 120px;
+    border: solid 8px  rgb(201, 181, 241);
+  
+    --angle-one: 105deg;
+    --angle-two: 290deg;
+    --spread-one: 80deg;
+    --spread-two: 90deg;
+    --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+    --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+    --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+    --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
+  
+    mask: conic-gradient(
+      transparent 0 var(--start-one),
+      white var(--start-one) var(--end-one),
+      transparent var(--end-one) var(--start-two),
+      white var(--start-two) var(--end-two),
+      transparent var(--end-two)
+    );
+  
+    z-index: -1;
+  }
+  
+  
+  .result-items::after {
+    margin-right: -61px;
+      margin-bottom: -45px;
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border: var(--size-2) solid var(--gray-0);
+      transform: scale(var(--border-scale, 0));
+      transition: transform 0.125s;
+      border-radius: 120px;
+      border: solid 8px rgb(47, 4, 65);
+      --angle-one: 0deg;
+      --angle-two: 210deg;
+      --spread-one: 207deg;
+      --spread-two: 135deg;
+    --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+    --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+    --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+    --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
+  
+    mask: conic-gradient(
+      transparent 0 var(--start-one),
+      white var(--start-one) var(--end-one),
+      transparent var(--end-one) var(--start-two),
+      white var(--start-two) var(--end-two),
+      transparent var(--end-two)
+    );
+  
+    z-index: -1;
+  }
+
+ .mainpage {
+    text-decoration: none;
+    position: absolute;
+    right: 30rem;
+    bottom: 6rem;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: "Playfair Display";
+    color: #fff;
+    width: 10em;
+    height: 4em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+  }
+  
+  .mainpage:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+  }
+  
+  @keyframes ani {
+    0% {
+      background-position: 0%;
+    }
+  
+    100% {
+      background-position: 400%;
+    }
+  }
+  
+.mainpage:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+  }
+  
+  .mainpage:hover::before {
+    filter: blur(20px);
+  }
+  
+  .mainpage:active {
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  }
+
+
+
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 1000px) {
+  .result-container {
+   width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+align-items: center;
+
+  }
+
+  .resulth2 {
+    font-size: 40px; 
+    margin-bottom: 10px; 
+  }
+.congrats{
+  font-size: 22px;
+}
+.loss{
+  font-size: 18px;
+  text-align: center;
+}
+  .result-message {
+    font-size: 24px; 
+    margin: 10px 0; 
+  }
+.result-items{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+  padding: 1rem;
+  width: 28vw;
+  height: 28vh;
+  margin: 0 ;
+}
+  .result-items>p {
+    font-size: 12px; 
+text-align: center;
+margin: 0;
+
+justify-content: center;
+  }
+
+  .result-items>p>span {
+    font-size: 12px; 
+  }
+
+  .mainpage {
+    position: static;
+  font-size: 16px;
+  }
+}
